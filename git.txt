@@ -20,7 +20,9 @@ git clone https://github.com/LearnWebCode/welcome-to-git.git -----clones files
 
 CREATING AND PUSHING REPOSITORY///////////////////////////////////////
 
-git remote set-url origin https://github.com/ilbrigz/rpository1.git
+git remote set-url origin https://github.com/ilbrigz/rpository1.git-----cloned the repository or manually added a remote called origin.
+
+git remote add origin https://username@stash/scm/PROJECT/repo.git
 
 git push origin master
 
