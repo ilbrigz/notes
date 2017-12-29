@@ -1,0 +1,80 @@
+COUNT//////////////////////////////////////////////////////////////////////////
+SELECT COUNT(*) FROM table;
+
+SELECT COUNT(DISTINCT *) FROM table;----------------results not repeated
+
+LIMIT//////////////////////////////////////////////////////////////////////////
+SELECT * FROM customer
+LIMIT 5; --------------------------------------output up to 5 rows only
+
+
+ORDER BY//////////////////////////////////////////////////////////////////////
+SELECT first_name, last_name FROM customer
+ORDER BY first_name ASC, 
+last_name DESC;-----------------------------------arrange queery in asc but if first_name are the same, last_name will be in desc
+
+SELECT * FROM customer
+ORDER BY last_name;-------------------------------entire table selected but ordered by the last_name
+
+CHALLENGE***************************************
+SELECT customer_id, amount FROM payment--------good habbit to include the order by column
+ORDER BY amount DESC
+LIMIT 10;--------------------------------------selects top 10 cusomers based on amount
+
+CHALLENGE***************************************
+SELECT film_id, title FROM film
+ORDER BY film_id
+LIMIT 5;-------------get the titles of the movies with film ids 1-5;
+
+BETWEEN//////////////////////////////////////////////////////////////////////{iclusive}
+NOT BETWEEN//////////////////////////////////////////////////////////////////{iclusive}
+SELECT customer_id,amount FROM payment
+WHERE amount BETWEEN 8 AND 9;-----------selects rows with amount between 8 and 9(not may be added to do the oposite;
+
+WHERE payment_date BETWEEN '2007-02-07' AND '2007-02-15';----------------------(strings)can be used for dates
+
+WHERE IN/////////////////////////////////////////////////////////////////////
+SELECT customer_id,rental_id,return_date 
+FROM rental
+WHERE customer_id IN (1,2)------------------------------WHERE cutomer_id = 1 OR cutomer_id = 2
+
+OR
+
+SELECT customer_id,rental_id,return_date 
+FROM rental
+WHERE customer_id NOT IN (1,2)
+ORDER BY return_date DESC;
+
+LIKE////////////////////////////////////////////////////////////(result case sensitive)
+NOT LIKE////
+ILIKE///(case sensitive)
+
+SELECT first_name,laste_name
+FROM custoner
+WHERE first_name LIKE 'jen%';--------------------------for matching any sequence of characters(_ for matching single character);
+
+WHERE first_name LIKE '%y';-----------ended in y
+
+WHERE first_name LIKE '%er%';-----------has er somewhere in the name, beginning, middle or end
+
+WHERE first_name LIKE '_her%';--------starts with a single character.
+
+CHALLENGE***************************************
+SELECT COUNT(first_name) FROM actor
+WHERE first_name ILIKE 'p%';-----------------count number of first names that starts with p
+
+SELECT COUNT(DISTINCT district) 
+FROM address;--------------------------------count unique districts from customers
+
+SELECT DISTINCT (district) FROM address;-----retrieve the names of distinc districts
+
+SELECT COUNT(*)
+FROM film
+WHERE rating = 'R'
+AND replacement_cost BETWEEN 5 AND 15;------count films with rating r and replacement bet 5 and 15
+
+SELECT COUNT(*) FROM film
+WHERE title ILIKE '%truman%' ;----------------count films with truman somewhere
+
+
+

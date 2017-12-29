@@ -1,0 +1,5 @@
+npm init -------------------------package.json
+
+λ npm install jquery --save--------saves a package and updage package.json
+
+npm install ---------------------updages all packages based on package.json

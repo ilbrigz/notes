@@ -1,0 +1,2 @@
+mkdr folder ----------------------------creates a folder
+touch file.text ------------------------creates a file

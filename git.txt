@@ -1,0 +1,42 @@
+﻿
+starting steps/////////////////////////////////////////////
+git config --global user.name "Brayn"
+git config --global user.email "ilogirb23@yahoo.com"
+
+mkdir----------------creates a new folder
+git init================creates a new repo
+
+git status----------------changes to be commited
+git add -A---------------- stage changes
+git add  app/assets/styles/base/_base.css------------stages a particular file only
+git reset app/assets/styles/base/_base.css----------remove file from staging area
+
+λ git commit --message 'asdf'--------------------------commits or
+git commit -m 'comment'---------------------------commits
+git commit -am "comment"--------------------------stage and commit
+git checkout -- .         -------------------------restores deleted commited files
+
+git clone https://github.com/LearnWebCode/welcome-to-git.git -----clones files
+
+CREATING AND PUSHING REPOSITORY///////////////////////////////////////
+
+git remote set-url origin https://github.com/ilbrigz/rpository1.git
+
+git push origin master
+
+GIT BRANCHES	/////////////////////////////////////////////////////
+git branch nameOfBranch------------------------creates a new branch
+git checkout nameOfBranch----------------------switch to a branch
+git checkout master ---------------------------go back to the master branch
+git branch -d nameOfBranch---------------------delete branch
+
+git checkout -b our-features-------------------checkout and commit in one go
+
+git push origin nameOfBranch-------------------push a branch to github
+we can also merge this online in github
+git pull origin master-------------------------update local copy with the github copy
+
+GIT MERGE //////////////////////////////////////////////////////////
+git merge nameOfBranch-------------------------merges master to nameOfBranch
+
+

@@ -1,0 +1,15 @@
+npm install gulp --global ----------------------save as global
+npm install gulp --save-dev --------------------save as devDependencies
+
+npm install gulp-watch --save-dev -------------installs gulp-watch
+
+//CSS POSTCSS
+gulp.src() ===================tesls where to pull information
+gulp.dest()===================destination
+pipe()
+
+//syntax
+ return gulp.src('./app/assets/styles/styles.css')
+.pipe(gulp.dest('./app/temp/styles'));///////POSTCSS
+
+npm install postcss-simple-vars --save-de
